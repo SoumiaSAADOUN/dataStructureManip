@@ -1,3 +1,4 @@
+// the time complexity of this solution is O(n), the space complexity is O(n) 
 // the structure that represents a node of the tree
 class ListNode {
   constructor(val) {
