@@ -66,7 +66,7 @@ class Node
             root.val = maxValue.val;
 
             root.left = DeleteValFromBinarySearchTree(root.left, maxValue.val);
-            
+
         }
 
         return root;
@@ -82,4 +82,38 @@ class Node
         }
         return current;
     }
+
+    public void BinaryTreeSearchInorderTraversal(Node root)
+    {
+        if (root != null)
+        {
+            BinaryTreeSearchInorderTraversal(root.left);
+            Console.WriteLine(root.val);
+            BinaryTreeSearchInorderTraversal(root.right);
+        }
+
+    }
+
+    public void BinaryTreeSearchPostorderTraversal(Node root)
+    {
+        if (root != null)
+        {
+            BinaryTreeSearchPostorderTraversal(root.left);
+            BinaryTreeSearchPostorderTraversal(root.right);
+            Console.WriteLine(root.val);
+
+
+        }
+    }
+
+        public void BinaryTreeSearchPretorderTraversal(Node root){
+            if(root!=null){
+                Console.WriteLine(root.val);
+                BinaryTreeSearchPretorderTraversal(root.left);
+                BinaryTreeSearchPretorderTraversal(root.right);
+
+            }
+        }
+
+
 }
